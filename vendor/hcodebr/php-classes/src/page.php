@@ -6,7 +6,7 @@ use Rain\TpL;
 
 class Page {
 
-        // ATRIBUTOS 
+        // ATRIBUTOS    
         private $tpl;
         private $options = [];
         private $defaults =[
@@ -24,7 +24,7 @@ class Page {
                 // config
                 $config = array(
                             "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/views/",
-                            "cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
+                            "cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/", 
                             "debug"         => false
                 );
 
@@ -41,12 +41,14 @@ class Page {
         $this->tpl->draw("header");//Ele vai repetir toda vez que colocar header em todas
     }
 
+
     private function setData($data = array())
     {
         foreach ($data as $key => $value){
             $this->tpl->assign($key,$value);
         }
-    }
+    }       
+
     // $this->tpl->draw("header");
     public function setTpl($name, $data =array(), $returnHTML = false){
         

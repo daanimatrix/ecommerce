@@ -3,13 +3,13 @@
 require_once("vendor/autoload.php");
 
 use \Slim\Slim;
-use Hcode\page;
+use \Hcode\page;
 
 $app = new Slim();
 
 $app->config('debug', true);
 
-$app->get('/', function() {
+$app->get('/', function() { 
 	
 	$page = new Page();
 
